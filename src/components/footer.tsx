@@ -27,12 +27,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-tertiary hover:text-white">Términos y condiciones</a></li>
-              <li><a href="#" className="text-tertiary hover:text-white">Política de privacidad</a></li>
-              <li><a href="#" className="text-tertiary hover:text-white">Política de cookies</a></li>
+              <li><button className="text-tertiary hover:text-white">Términos y condiciones</button></li>
+              <li><button className="text-tertiary hover:text-white">Política de privacidad</button></li>
+              <li><button className="text-tertiary hover:text-white">Política de cookies</button></li>
             </ul>
           </div>
-
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-2 text-tertiary">
