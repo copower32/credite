@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const PrivacyPolicy: React.FC = () => {
+
+  useEffect(() => {
+    // Desplaza la ventana al inicio cuando se monta el componente
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div id="privacy-policy" className="max-w-4xl mx-auto py-8 px-6 sm:px-8 md:px-10">
+    <div
+      id="privacy-policy"
+      className="max-w-4xl mx-auto py-8 px-6 sm:px-8 md:px-10"
+      style={{ marginTop: "5rem" }} 
+    >
       {/* Título */}
       <h2 className="text-4xl font-semibold text-center text-[#292D32] mb-6">
         Política de Privacidad
@@ -98,6 +107,7 @@ const PrivacyPolicy: React.FC = () => {
         </section>
       </div>
     </div>
+
   );
 };
 
