@@ -1,5 +1,4 @@
 import React from 'react';
-import ResponsiveNavbar from './components/ResponsiveNavbar';
 import Hero from './components/Hero';
 import LoanProcess from './components/LoanProcess';
 import Reviews from './components/Reviews';
