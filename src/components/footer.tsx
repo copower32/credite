@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               <li><a href="#calculadora" className="text-tertiary hover:text-white">Calculadora</a></li>
               <li><a href="#faqs" className="text-tertiary hover:text-white">FAQs</a></li>
               <li><a href="#inversores" className="text-tertiary hover:text-white">Inversores</a></li>
-              <li><a href="#contacto" className="text-tertiary hover:text-white">Contacto</a></li>              </ul>
+              <li><a href="https://wa.me/573245192378" target="_blank" rel="noopener noreferrer" className="text-tertiary hover:text-white">Contacto</a></li>              </ul>
           </div>
 
           <div>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="text-tertiary text-sm text-center mt-8">
-          Copyright 2024 Creditea.me SAS All Rights Reserved
+          Copyright 2025 Creditea.me SAS All Rights Reserved
         </div>
       </div>
     </footer>

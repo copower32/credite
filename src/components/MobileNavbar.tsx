@@ -8,7 +8,7 @@ const MobileNavbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full bg-white shadow-md">
+    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center">
@@ -77,7 +77,7 @@ const MobileNavbar: React.FC = () => {
           </li>
           <li>
             <a
-              href="#inversores"
+              href="#contacto"
               className="block py-2 px-3 rounded-lg hover:bg-blue-500 hover:text-white"
               onClick={toggleMenu}
             >
@@ -85,8 +85,7 @@ const MobileNavbar: React.FC = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#contacto"
+              <a href="https://wa.me/573245192378" target="_blank" rel="noopener noreferrer"
               className="block py-2 px-3 rounded-lg hover:bg-blue-500 hover:text-white"
               onClick={toggleMenu}
             >
@@ -108,4 +107,3 @@ const MobileNavbar: React.FC = () => {
 };
 
 export default MobileNavbar;
-export {};

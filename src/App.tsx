@@ -15,7 +15,6 @@ const App: React.FC = () => {
       className="min-h-screen bg-cover bg-center max-w-[1440px] mx-auto scroll-smooth"
       style={{ backgroundImage: "url('/images/bg.png')" }}
     >
-      <ResponsiveNavbar />
       <Hero />
       <Slidert />
       <Elegirnos />

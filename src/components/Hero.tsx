@@ -1,6 +1,6 @@
 const LoanText = () => {
   return (
-    <div className="text-left w-full lg:w-1/2 text-black px-4">
+    <div className="text-left w-full lg:w-1/2 text-black px-4 mt-12 md:mt-0">
       <h1 className="text-4xl font-bold mb-4">
         Tu <span className="text-primary">préstamo</span>
         <br /> rápido, fácil y
@@ -30,7 +30,7 @@ const LoanText = () => {
         <span className="ml-4 font-semibold">+1.2k</span>
         <span className="text-gray-500 ml-1">Clientes satisfechos</span>
       </div>
-      <button className="bg-primary text-Quaternary py-3 px-6 rounded-lg shadow-lg hover:bg-blue-600 transition-all">
+      <button className="bg-primary text-Quaternary py-3 px-6 rounded-lg shadow-lg hover:bg-blue-600 transition-all w-full md:w-auto text-center">
         Solicita tu préstamo ahora
       </button>
     </div>
