@@ -10,22 +10,22 @@ const MobileNavbar: React.FC = () => {
   };
 
   const handleNavigation = (hash: string) => {
-    setIsOpen(false); // Cierra el menú al hacer clic
-    navigate("/"); // Redirige a la página principal
+    setIsOpen(false);
+    navigate("/"); // 
     setTimeout(() => {
-      const section = document.querySelector(hash); // Busca el ID de la sección
+      const section = document.querySelector(hash);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" }); // Desplaza suavemente
+        section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Ajusta el tiempo según sea necesario
+    }, 100);
   };
 
   const handleHomeNavigation = () => {
-    setIsOpen(false); // Asegura que el menú esté cerrado
-    navigate("/"); // Redirige al inicio
+    setIsOpen(false);
+    navigate("/");
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // Desplaza al inicio
-    }, 100); // Ajusta el tiempo si es necesario
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   return (
@@ -34,7 +34,7 @@ const MobileNavbar: React.FC = () => {
         {/* Logo como botón para redirigir al inicio */}
         <button onClick={handleHomeNavigation} className="flex items-center">
           <img
-            src="/images/Logo_azul.png" // Ruta de la imagen desde la carpeta public
+            src="/images/Logo_azul.png"
             alt="Creditea.me"
             className="w-auto h-10 object-contain"
           />
@@ -43,7 +43,7 @@ const MobileNavbar: React.FC = () => {
         {/* Botón del menú hamburguesa */}
         <button
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none"
-          onClick={handleHomeNavigation}
+          onClick={toggleMenu}
         >
           <svg
             className="w-6 h-6 text-gray-700"
@@ -60,13 +60,13 @@ const MobileNavbar: React.FC = () => {
             />
           </svg>
         </button>
+
       </div>
 
       {/* Menú desplegable */}
       <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } md:hidden bg-white border-t border-gray-200`}
+        className={`${isOpen ? "block" : "hidden"
+          } md:hidden bg-white border-t border-gray-200`}
       >
         <ul className="flex flex-col space-y-2 px-4 py-3 text-gray-700">
           <li>

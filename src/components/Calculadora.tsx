@@ -52,17 +52,31 @@ const Calculadora: React.FC = () => {
   const monthlyPayment =
     formData.amount && formData.installments
       ? formatNumber(
-          (parseInt(formData.amount) / parseInt(formData.installments)).toFixed(
-            0
-          )
+          (parseInt(formData.amount) / parseInt(formData.installments)).toFixed(0)
         )
       : "0";
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-40 p-6">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-40 p-6">
+      {/* Contenedor de título y descripción - Ahora primero en móvil */}
+      <div className="w-full lg:w-1/2 text-center lg:text-left order-first lg:order-last">
+        <h2 className="text-4xl font-bold mb-4">Simula tu préstamo ideal</h2>
+        <p className="text-tertiary mb-4">
+          Calcula tu préstamo en segundos: ingresa el monto, plazo y tu salario
+          para obtener una proyección estimada de tus cuotas. Las condiciones
+          finales serán ajustadas de acuerdo con tu perfil y situación
+          financiera específica.
+        </p>
+        {/* Botón movido al final en móvil */}
+        <button className="hidden lg:block bg-primary text-quaternary px-6 py-3 rounded-lg mt-6 font-bold hover:opacity-90 transition-opacity">
+          Solicita tu préstamo ahora
+        </button>
+      </div>
+
+      {/* Formulario de calculadora */}
       <div
         id="calculadora"
-        className="w-full lg:w-1/2 bg-white rounded-xl shadow-2xl p-6"
+        className="w-full lg:w-1/2 bg-white rounded-xl shadow-2xl p-6 order-2 lg:order-first"
       >
         <div className="space-y-4">
           <div>
@@ -146,18 +160,12 @@ const Calculadora: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 text-center lg:text-left">
-        <h2 className="text-4xl font-bold mb-4">Simula tu préstamo ideal</h2>
-        <p className="text-tertiary mb-4">
-          Calcula tu préstamo en segundos: ingresa el monto, plazo y tu salario
-          para obtener una proyección estimada de tus cuotas. Las condiciones
-          finales serán ajustadas de acuerdo con tu perfil y situación
-          financiera específica.
-        </p>
-        <button className="bg-primary text-quaternary px-6 py-3 rounded-lg mt-6 font-bold hover:opacity-90 transition-opacity">
-          Solicita tu préstamo ahora
-        </button>
-      </div>
+
+      {/* Botón de solicitud - Último en móvil */}
+      <button className="block lg:hidden w-full bg-primary text-quaternary px-6 py-3 rounded-lg mt-6 font-bold hover:opacity-90 transition-opacity order-last">
+        Solicita tu préstamo ahora
+      </button>
+
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-8 max-w-md w-full relative shadow-xl">
