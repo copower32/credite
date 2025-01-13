@@ -18,9 +18,9 @@ Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu sistema.
 cd <NOMBRE_DEL_DIRECTORIO_DEL_PROYECTO>
 
 3. Instala las dependencias del proyecto utilizando npm:
-``` bash
+```bash
 npm install
 
 4. Iniciar el servidor de desarrollo
-``` bash
+```bash
 npm start
